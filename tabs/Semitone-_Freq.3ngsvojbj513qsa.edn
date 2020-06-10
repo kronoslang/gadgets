@@ -15,8 +15,7 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [99 -65]
- }
+ :pos [99 -65]}
  "ggu52j7vy3vcl49" 
 {:inputs ["a"]
  :label "/ #12"
@@ -29,12 +28,10 @@
  :label "(freq steps) = arg"
  :outputs ["freq" "steps"]
  :parsed "arg"
- :pos [-198 -65]
- }
+ :pos [-198 -65]}
  "thpmnlrye8juko4" 
 {:inputs ["b"]
  :label "Math:Pow(#2 $b)"
  :outputs [""]
  :parsed [:fn "Math:Pow" [:tuple [:invariant "2"] [:free-var "b"]]]
- :pos [0 15]
- }}}}
+ :pos [0 15]}}}}

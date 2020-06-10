@@ -47,44 +47,38 @@
  :label "> #0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] ">" [:invariant "0.5"]]
- :pos [117 131]
- }
+ :pos [117 131]}
  "1yrhs06ros1s2f5" 
 {:inputs ["tuple"]
  :label "Arity($tuple)"
  :outputs [""]
  :parsed [:fn "Arity" [:tuple [:free-var "tuple"]]]
- :pos [-253 -193]
- }
+ :pos [-253 -193]}
  "3wk6j14nvlv4cme" 
 {:ephemeral-inputs #{"more"}
  :inputs ["a" "b" "more" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [-281 35]
- }
+ :pos [-281 35]}
  "4b1q7spiotpsp5t" 
 {:inputs ["x"]
  :label "Fraction($x)"
  :outputs [""]
  :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [187 -92]
- }
+ :pos [187 -92]}
  "6lrjhyvqrdvoweu" 
 {:inputs ["a"]
  :label "* #2"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:invariant "2"]]
- :pos [290 -160]
- }
+ :pos [290 -160]}
  "6uf5t39639e6zmo" 
 {:inputs []
  :label "#1 / #60"
  :outputs [""]
  :parsed [:infix [:invariant "1"] "/" [:invariant "60"]]
- :pos [-401 -22]
- }
+ :pos [-401 -22]}
  "757sad7916n5auv" 
 {:ephemeral-inputs #{"tail"}
  :flip-y true
@@ -92,135 +86,116 @@
  :label "Sequence($head $tail...)"
  :outputs [""]
  :parsed [:fn "Sequence" [:tuple [:free-var "head"] [:free-var "tail"] [:free-var "tail..."]]]
- :pos [-91 88]
- }
+ :pos [-91 88]}
  "8argpi1oz6s36ry" 
 {:inputs ["a"]
  :label "- #1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:invariant "1"]]
- :pos [395 -160]
- }
+ :pos [395 -160]}
  "8jyuvmi3r2gd14" 
 {:inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [-66 -143]
- }
+ :pos [-66 -143]}
  "8uk5cbrgegt2wcs" 
 {:inputs ["a"]
  :label "Abs($a)"
  :outputs [""]
  :parsed [:fn "Abs" [:tuple [:free-var "a"]]]
- :pos [500 -160]
- }
+ :pos [500 -160]}
  "9b376wzs6pcwd2" 
 {:inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [72 -92]
- }
+ :pos [72 -92]}
  "9nxavrjm0o72di2" 
 {:inputs ["a"]
  :label "+ #12"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:invariant "12"]]
- :pos [-274 88]
- }
+ :pos [-274 88]}
  "9tukgsn1ek844mx" 
 {:inputs ["vector" "index"]
  :label "Select($vector $index)"
  :outputs [""]
  :parsed [:fn "Select" [:tuple [:free-var "vector"] [:free-var "index"]]]
- :pos [211 219]
- }
+ :pos [211 219]}
  "ayoepkmht95dcfh" 
 {:inputs ["f"]
  :label "Coerce(Float $f)"
  :outputs [""]
  :parsed [:fn "Coerce" [:tuple "Float" [:free-var "f"]]]
- :pos [-168 -92]
- }
+ :pos [-168 -92]}
  "d4gnzenh7atxzjb" 
 {:inputs ["a"]
  :label "& 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "&" [:float "1"]]
- :pos [220 131]
- }
+ :pos [220 131]}
  "d9uax2entfdmtpt" 
 {:inputs ["forward" "backward"]
  :label "[$forward $backward]"
  :outputs [""]
  :parsed [:list [:free-var "forward"] [:free-var "backward"]]
- :pos [28 219]
- }
+ :pos [28 219]}
  "dxexqgyaimfwe7d" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [575 165]
- }
+ :pos [575 165]}
  "fpecu7wrj6za89m" 
 {:inputs []
  :label "0"
  :outputs [""]
  :parsed [:float "0"]
- :pos [-530 35]
- }
+ :pos [-530 35]}
  "hxozjj2p6znu477" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-13 -92]
- }
+ :pos [-13 -92]}
  "ixn22x21v7p24sd" 
 {:inputs ["vector" "index"]
  :label "Select-Wrap($vector $index)"
  :outputs [""]
  :parsed [:fn "Select-Wrap" [:tuple [:free-var "vector"] [:free-var "index"]]]
- :pos [364 219]
- }
+ :pos [364 219]}
  "jnzu9k9gvyeoo6r" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [346 -21]
- }
+ :pos [346 -21]}
  "lf64qbsqr5qgaht" 
 {:inputs ["notes"]
  :label "(first rest) = $notes"
  :outputs ["first" "rest"]
  :parsed [:free-var "notes"]
- :pos [-452 94]
- }
+ :pos [-452 94]}
  "p32e1dgaujac26b" 
 {:inputs ["a"]
  :label "Floor($a)"
  :outputs [""]
  :parsed [:fn "Floor" [:tuple [:free-var "a"]]]
- :pos [422 46]
- }
+ :pos [422 46]}
  "phm6rl9nt7p9irq" 
 {:inputs []
  :label "#1"
  :outputs [""]
  :parsed [:invariant "1"]
- :pos [-161 -143]
- }
+ :pos [-161 -143]}
  "q2jotbomg4qb39k" 
 {:color 0
  :inputs []
  :label "(bpm octaves notes...) = arg"
  :outputs ["bpm" "octaves" "notes..."]
  :parsed "arg"
- :pos [-554 -128]
- }
+ :pos [-554 -128]}
  "qfh6mshj9t31w3c" 
 {:inputs ["notes"]
  :label "As-List($notes)"
@@ -232,28 +207,24 @@
  :label "Algorithm:Reverse($xs)"
  :outputs [""]
  :parsed [:fn "Algorithm:Reverse" [:tuple [:free-var "xs"]]]
- :pos [-217 147]
- }
+ :pos [-217 147]}
  "qoz857h43cypkci" 
 {:inputs ["a"]
  :label "* #12"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:invariant "12"]]
- :pos [517 105]
- }
+ :pos [517 105]}
  "tag5dxpfmcqp5n" 
 {:inputs ["b"]
  :label "#1 -"
  :outputs [""]
  :parsed [:infix [:invariant "1"] "-" [:free-var "b"]]
- :pos [457 -89]
- }
+ :pos [457 -89]}
  "v51wwum6fyer21l" 
 {:inputs ["in-1"]
  :label "Timer($in-1)"
  :outputs [""]
  :parsed [:fn "Timer" [:tuple [:free-var "in-1"]]]
- :pos [-405 35]
- }}
+ :pos [-405 35]}}
  :scale 1
  :scroll [0 0]}}
