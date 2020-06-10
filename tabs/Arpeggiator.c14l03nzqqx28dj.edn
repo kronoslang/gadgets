@@ -1,0 +1,149 @@
+{:documentation "Creates a pattern sequence with `notes` repeated `octaves` times. `12 * n` is added to each note, with `n` being the number of the cycle in repetition. The arpeggiator plays `bpm` notes per minute."
+ :draft-argument "240 4 0 3 7 10"
+ :identifier "Arpeggiator"
+ :identity "c14l03nzqqx28dj"
+ :patch
+{:cables
+{["085alh0lqaelw3y" 0] [:fixed "5bxzq1rfx9lafl9" 0]
+ ["085alh0lqaelw3y" 1] [:fixed "ad8y6061vbrr4yc" 0]
+ ["17ig753xfxbh1te" 0] [:fixed "cz09q1kwjjwicuy" 0]
+ ["17ig753xfxbh1te" 1] [:fixed "t2uug19wibptpnc" 1]
+ ["2xk3rdb2m49vbe6" 0] [:fixed "t2uug19wibptpnc" 2]
+ ["2xk3rdb2m49vbe6" 1] [:fixed "38bz6z6ex9bai3" 0]
+ ["2znta2iaf1li64c" 0] [:fixed "085alh0lqaelw3y" 0]
+ ["2znta2iaf1li64c" 1] [:fixed "t2uug19wibptpnc" 1]
+ ["365thcxa9qvemwe" 0] [:fixed "t2uug19wibptpnc" 2]
+ ["38bz6z6ex9bai3" 0] [:fixed "lxmcm9ptld553dn" 0]
+ ["38bz6z6ex9bai3" 1] [:fixed "38etod4lu9zgn8l" 0]
+ ["38bz6z6ex9bai3" 2] [:fixed "t2uug19wibptpnc" 0]
+ ["5bxzq1rfx9lafl9" 0] [:fixed "38bz6z6ex9bai3" 0]
+ ["ad8y6061vbrr4yc" 0] [:fixed "fq2g7pqhovyi3j" 0]
+ ["ad8y6061vbrr4yc" 1] [:fixed "365thcxa9qvemwe" 0]
+ ["cmd7wvmxrq59avq" 0] [:fixed "mryoywxnkdyzpx5" 0]
+ ["cz09q1kwjjwicuy" 0] [:fixed "2znta2iaf1li64c" 0]
+ ["lxmcm9ptld553dn" 0] [:fixed "kh2bq79ho9ae8gp" 0]
+ ["mryoywxnkdyzpx5" 0] [:fixed "17ig753xfxbh1te" 0]
+ ["o39bylmuoibo8hb" 0] [:fixed "2xk3rdb2m49vbe6" 0]
+ ["o39bylmuoibo8hb" 1] [:fixed "cmd7wvmxrq59avq" 0]}
+ :nodes
+{"085alh0lqaelw3y" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-51 -69]
+ :selected true}
+ "17ig753xfxbh1te" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [264 -69]
+ :selected true}
+ "2xk3rdb2m49vbe6" 
+{:inputs ["vector" "index"]
+ :label "Select-Wrap($vector $index)"
+ :outputs [""]
+ :parsed [:fn "Select-Wrap" [:tuple [:free-var "vector"] [:free-var "index"]]]
+ :pos [-156 120]
+ :selected true}
+ "2znta2iaf1li64c" 
+{:inputs ["a" "b" "more..."]
+ :label "/"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [34 -69]
+ :selected true}
+ "365thcxa9qvemwe" 
+{:inputs ["tuple"]
+ :label "Arity($tuple)"
+ :outputs [""]
+ :parsed [:fn "Arity" [:tuple [:free-var "tuple"]]]
+ :pos [-291 -170]
+ :selected true}
+ "38bz6z6ex9bai3" 
+{:ephemeral-inputs #{"more"}
+ :inputs ["a" "b" "more" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [-319 58]
+ :selected true}
+ "38etod4lu9zgn8l" 
+{:inputs []
+ :label "#1 / #60"
+ :outputs [""]
+ :parsed [:infix [:invariant "1"] "/" [:invariant "60"]]
+ :pos [-439 1]
+ :selected true}
+ "5bxzq1rfx9lafl9" 
+{:inputs ["f"]
+ :label "Coerce(Float $f)"
+ :outputs [""]
+ :parsed [:fn "Coerce" [:tuple "Float" [:free-var "f"]]]
+ :pos [-206 -69]
+ :selected true}
+ "ad8y6061vbrr4yc" 
+{:inputs ["a" "b" "more..."]
+ :label "/"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [-104 -120]
+ :selected true}
+ "cmd7wvmxrq59avq" 
+{:inputs ["a"]
+ :label "* #12"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:invariant "12"]]
+ :pos [435 57]
+ :selected true}
+ "cz09q1kwjjwicuy" 
+{:inputs ["x"]
+ :label "Fraction($x)"
+ :outputs [""]
+ :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
+ :pos [149 -69]
+ :selected true}
+ "fq2g7pqhovyi3j" 
+{:inputs []
+ :label "#1"
+ :outputs [""]
+ :parsed [:invariant "1"]
+ :pos [-199 -120]
+ :selected true}
+ "kh2bq79ho9ae8gp" 
+{:inputs []
+ :label "0"
+ :outputs [""]
+ :parsed [:float "0"]
+ :pos [-568 58]
+ :selected true}
+ "lxmcm9ptld553dn" 
+{:inputs ["in-1"]
+ :label "Timer($in-1)"
+ :outputs [""]
+ :parsed [:fn "Timer" [:tuple [:free-var "in-1"]]]
+ :pos [-443 58]
+ :selected true}
+ "mryoywxnkdyzpx5" 
+{:inputs ["a"]
+ :label "Floor($a)"
+ :outputs [""]
+ :parsed [:fn "Floor" [:tuple [:free-var "a"]]]
+ :pos [340 -2]
+ :selected true}
+ "o39bylmuoibo8hb" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [493 117]
+ :selected true}
+ "t2uug19wibptpnc" 
+{:color 0
+ :inputs []
+ :label "(bpm octaves notes...) = arg"
+ :outputs ["bpm" "octaves" "notes..."]
+ :parsed "arg"
+ :pos [-592 -105]
+ :selected true}}}}

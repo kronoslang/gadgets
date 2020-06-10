@@ -39,8 +39,8 @@
  :pos [39 -88]}
  "aqlobp4vyje9avn" 
 {:inputs []
- :label "(bpm pat) = arg"
- :outputs ["bpm" "pat"]
+ :label "(bpm pat...) = arg"
+ :outputs ["bpm" "pat..."]
  :parsed "arg"
  :pos [-243 29]}
  "y088515wserm7kk" 

@@ -24,7 +24,7 @@ Timer(in-1) {
 ndna62d1fv0oe1o-0
 }
 
-Pattern-Seq(bpm pat) {
+Pattern-Seq(bpm pat...) {
 ;; `pat...` is a list of values through which the sequencer cycles at `bpm` steps per minute. The values update at the control rate.
 (n3oeesu032aelk65-0) = 0
 (n5jq2owb54pipjv0-0) = Select-Wrap(naqlobp4vyje9avn-1 n8cwzzi6rai31hl-0)
@@ -35,7 +35,7 @@ Pattern-Seq(bpm pat) {
 n5jq2owb54pipjv0-0
 }
 
-Artikulator(bpm pat) {
+Artikulator(bpm pat...) {
 ;; Produces a gate signal that is open for a fraction of every step, as specified by `pat`. The pattern proceeds by `bpm` steps a minute.
 (n7ox5dk5hogdpbc1-0) = (#1 / #60)
 (n9k8dyfp815f1bar-0) = (nfnrpcpxjusdvdn5-0 < n339jcbe9p16ty89-0)
@@ -83,6 +83,72 @@ LCG(in-1) {
 (naz7n708x2ysqu8v-0) = (n4jo578zbo47pmxt-0 * n51pvgfkb9qrt4qq-0)
 (n2j8rwonlx74f4ud-0) = (nfwltp22r7heu6y4-0 & n3rzq1cpxctf63cl-0)
 n2j8rwonlx74f4ud-0
+}
+
+Semitone->Freq(freq steps) {
+;; Computes a new frequency that is `freq` transposed by semitone `steps`.
+(nef06ry7evs3kc7t-0) = (npakod33ooi05cl0-0 * nthpmnlrye8juko4-0)
+(nggu52j7vy3vcl49-0) = (npakod33ooi05cl0-1 / #12)
+(npakod33ooi05cl0-0 npakod33ooi05cl0-1) = arg
+(nthpmnlrye8juko4-0) = Math:Pow(#2 nggu52j7vy3vcl49-0)
+nef06ry7evs3kc7t-0
+}
+
+Arpeggiator(bpm octaves notes...) {
+;; Creates a pattern sequence with `notes` repeated `octaves` times. `12 * n` is added to each note, with `n` being the number of the cycle in repetition. The arpeggiator plays `bpm` notes per minute.
+(nt2uug19wibptpnc-0 nt2uug19wibptpnc-1 nt2uug19wibptpnc-2) = arg
+(nad8y6061vbrr4yc-0) = (nfq2g7pqhovyi3j-0 / n365thcxa9qvemwe-0)
+(n38bz6z6ex9bai3-0) = (nlxmcm9ptld553dn-0 * n38etod4lu9zgn8l-0 * nt2uug19wibptpnc-0)
+(n2xk3rdb2m49vbe6-0) = Select-Wrap(nt2uug19wibptpnc-2 n38bz6z6ex9bai3-0)
+(ncz09q1kwjjwicuy-0) = Fraction(n2znta2iaf1li64c-0)
+(n085alh0lqaelw3y-0) = (n5bxzq1rfx9lafl9-0 * nad8y6061vbrr4yc-0)
+(no39bylmuoibo8hb-0) = (n2xk3rdb2m49vbe6-0 + ncmd7wvmxrq59avq-0)
+(nkh2bq79ho9ae8gp-0) = 0
+(nfq2g7pqhovyi3j-0) = #1
+(n38etod4lu9zgn8l-0) = (#1 / #60)
+(nlxmcm9ptld553dn-0) = Timer(nkh2bq79ho9ae8gp-0)
+(ncmd7wvmxrq59avq-0) = (nmryoywxnkdyzpx5-0 * #12)
+(nmryoywxnkdyzpx5-0) = Floor(n17ig753xfxbh1te-0)
+(n17ig753xfxbh1te-0) = (ncz09q1kwjjwicuy-0 * nt2uug19wibptpnc-1)
+(n5bxzq1rfx9lafl9-0) = Coerce(Float n38bz6z6ex9bai3-0)
+(n365thcxa9qvemwe-0) = Arity(nt2uug19wibptpnc-2)
+(n2znta2iaf1li64c-0) = (n085alh0lqaelw3y-0 / nt2uug19wibptpnc-1)
+no39bylmuoibo8hb-0
+}
+
+Arpeggiator<->(bpm octaves notes...) {
+;; Creates a pattern sequence with `notes` repeated `octaves` times. `12 * n` is added to each note, with `n` being the number of the cycle in repetition. The arpeggiator plays `bpm` notes per minute.
+(n757sad7916n5auv-0) = Sequence(n9nxavrjm0o72di2-0 nqi5vsju4qes0im7-0 )
+(nq2jotbomg4qb39k-0 nq2jotbomg4qb39k-1 nq2jotbomg4qb39k-2) = arg
+(n1nhh9rra4b2bd0-0) = (n4b1q7spiotpsp5t-0 > #0.5)
+(nfpecu7wrj6za89m-0) = 0
+(np32e1dgaujac26b-0) = Floor(njnzu9k9gvyeoo6r-0)
+(nhxozjj2p6znu477-0) = (nayoepkmht95dcfh-0 * n8jyuvmi3r2gd14-0)
+(nqfh6mshj9t31w3c-0) = As-List(nq2jotbomg4qb39k-2)
+(nqoz857h43cypkci-0) = (np32e1dgaujac26b-0 * #12)
+(nd9uax2entfdmtpt-0) = [nqfh6mshj9t31w3c-0 n757sad7916n5auv-0]
+(n9b376wzs6pcwd2-0) = (nhxozjj2p6znu477-0 / nq2jotbomg4qb39k-1)
+(n9tukgsn1ek844mx-0) = Select(nd9uax2entfdmtpt-0 nd4gnzenh7atxzjb-0)
+(n6lrjhyvqrdvoweu-0) = (n4b1q7spiotpsp5t-0 * #2)
+(ntag5dxpfmcqp5n-0) = (#1 - n8uk5cbrgegt2wcs-0)
+(n1yrhs06ros1s2f5-0) = Arity(nq2jotbomg4qb39k-2)
+(nphm6rl9nt7p9irq-0) = #1
+(n9nxavrjm0o72di2-0) = (nlf64qbsqr5qgaht-0 + #12)
+(njnzu9k9gvyeoo6r-0) = (ntag5dxpfmcqp5n-0 * nq2jotbomg4qb39k-1)
+(n6uf5t39639e6zmo-0) = (#1 / #60)
+(ndxexqgyaimfwe7d-0) = (nixn22x21v7p24sd-0 + nqoz857h43cypkci-0)
+(nd4gnzenh7atxzjb-0) = (n1nhh9rra4b2bd0-0 & 1)
+(nv51wwum6fyer21l-0) = Timer(nfpecu7wrj6za89m-0)
+(nqi5vsju4qes0im7-0) = Algorithm:Reverse(nlf64qbsqr5qgaht-1)
+(nixn22x21v7p24sd-0) = Select-Wrap(n9tukgsn1ek844mx-0 n3wk6j14nvlv4cme-0)
+(n8argpi1oz6s36ry-0) = (n6lrjhyvqrdvoweu-0 - #1)
+(n3wk6j14nvlv4cme-0) = (nv51wwum6fyer21l-0 * n6uf5t39639e6zmo-0 * nq2jotbomg4qb39k-0)
+(n4b1q7spiotpsp5t-0) = Fraction(n9b376wzs6pcwd2-0)
+(n8uk5cbrgegt2wcs-0) = Abs(n8argpi1oz6s36ry-0)
+(nlf64qbsqr5qgaht-0 nlf64qbsqr5qgaht-1) = nq2jotbomg4qb39k-2
+(n8jyuvmi3r2gd14-0) = (nphm6rl9nt7p9irq-0 / n1yrhs06ros1s2f5-0)
+(nayoepkmht95dcfh-0) = Coerce(Float n3wk6j14nvlv4cme-0)
+ndxexqgyaimfwe7d-0
 }
 
 }

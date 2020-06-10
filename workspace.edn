@@ -1,7 +1,7 @@
 {:assets 
 {}
- :current-tab 4
- 
+ :current-tab 0
+ :file "test2.veneer"
  :manifest 
 {:dependencies 
 {}
@@ -10,4 +10,4 @@
  :name "Gadgets"
  :url "https://kronoslang.io"
  :version "0.1"}
- :tabs ("tabs/draft.berxuy549uvz2y6.edn" "tabs/Timer.bdm538l61zaso7j.edn" "tabs/Pattern-Seq.initial.edn" "tabs/Artikulator.554mxn4yav9204b.edn" "tabs/Random-Seq.adme9a08kkmvdx.edn" "tabs/LCG.np85krinibr2e5c.edn")}
+ :tabs ("tabs/draft.berxuy549uvz2y6.edn" "tabs/Timer.bdm538l61zaso7j.edn" "tabs/Pattern-Seq.initial.edn" "tabs/Artikulator.554mxn4yav9204b.edn" "tabs/Random-Seq.adme9a08kkmvdx.edn" "tabs/LCG.np85krinibr2e5c.edn" "tabs/Semitone-_Freq.3ngsvojbj513qsa.edn" "tabs/Arpeggiator.c14l03nzqqx28dj.edn" "tabs/Arpeggiator_-_.qcn5s7y3uztngf.edn")}

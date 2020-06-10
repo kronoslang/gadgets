@@ -43,8 +43,8 @@
  :pos [-441 -16]}
  "e6ep2mm4vq28zo3" 
 {:inputs []
- :label "(bpm pat) = arg"
- :outputs ["bpm" "pat"]
+ :label "(bpm pat...) = arg"
+ :outputs ["bpm" "pat..."]
  :parsed "arg"
  :pos [-515 -82]}
  "fnrpcpxjusdvdn5" 

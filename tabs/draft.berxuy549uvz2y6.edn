@@ -1,6 +1,84 @@
 {:identity "berxuy549uvz2y6"
  :patch
 {:cables
-{}
+{["1dcoe08w4hcxs5f" 0] [:fixed "n0webur96139lss" 0]
+ ["1dcoe08w4hcxs5f" 1] [:fixed "c3c27q11jlvkng" 0]
+ ["4w8f916dpafn1hh" 0] [:fixed "1dcoe08w4hcxs5f" 0]
+ ["7jkc6gd9idaod7u" 0] [:fixed "d8eahq90u5yp2xj" 0]
+ ["7jkc6gd9idaod7u" 1] [:fixed "m0c1uhhnr2w5vsl" 0]
+ ["7jkc6gd9idaod7u" 2] [:fixed "33vbsh56kuf8g0o" 0]
+ ["d8eahq90u5yp2xj" 0] [:fixed "3ii8n6lt40gw74s" 0]
+ ["n0webur96139lss" 0] [:fixed "aoglhz44jnge4si" 0]
+ ["n0webur96139lss" 1] [:fixed "7jkc6gd9idaod7u" 0]}
  :nodes
-{}}}
+{"1dcoe08w4hcxs5f" 
+{:inputs ["sig" "rate"]
+ :label "Control:Smooth-Audio($sig $rate)"
+ :outputs [""]
+ :parsed [:fn "Control:Smooth-Audio" [:tuple [:free-var "sig"] [:free-var "rate"]]]
+ :pos [175 166]
+ }
+ "33vbsh56kuf8g0o" 
+{:inputs []
+ :label "[0 3 6 9]"
+ :outputs [""]
+ :parsed [:list [:float "0"] [:float "3"] [:float "6"] [:float "9"]]
+ :pos [-165 -195]
+ }
+ "3ii8n6lt40gw74s" 
+{:inputs []
+ :label "108"
+ :outputs [""]
+ :parsed [:number-widget :float "k7t56j" "219" ""]
+ :pos [-506 -136]
+ }
+ "4w8f916dpafn1hh" 
+{:inputs ["freq"]
+ :label "Gen:Sin($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
+ :pos [158 280]
+ }
+ "7jkc6gd9idaod7u" 
+{:ephemeral-inputs #{"notes"}
+ :inputs ["bpm" "octaves" "notes" "notes..."]
+ :label "Arpeggiator<->($bpm $octaves $notes...)"
+ :outputs [""]
+ :parsed [:fn "Arpeggiator<->" [:tuple [:free-var "bpm"] [:free-var "octaves"] [:free-var "notes"] [:free-var "notes..."]]]
+ :pos [-99 -16]
+ }
+ "aoglhz44jnge4si" 
+{:inputs []
+ :label "55"
+ :outputs [""]
+ :parsed [:float "55"]
+ :pos [-199 77]
+ }
+ "c3c27q11jlvkng" 
+{:inputs []
+ :label "10"
+ :outputs [""]
+ :parsed [:number-widget :float "-q1o7ia" "693" ""]
+ :pos [146 75]
+ }
+ "d8eahq90u5yp2xj" 
+{:inputs ["a"]
+ :label "* 4"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:number-widget :float "-c1g3dd" "2" ""]]
+ :pos [-390 -105]
+ }
+ "m0c1uhhnr2w5vsl" 
+{:inputs []
+ :label "4"
+ :outputs [""]
+ :parsed [:number-widget :float "-ldubqp" "4" ""]
+ :pos [-222 -128]
+ }
+ "n0webur96139lss" 
+{:inputs ["freq" "steps"]
+ :label "Semitone->Freq($freq $steps)"
+ :outputs [""]
+ :parsed [:fn "Semitone->Freq" [:tuple [:free-var "freq"] [:free-var "steps"]]]
+ :pos [1 79]
+ }}}}

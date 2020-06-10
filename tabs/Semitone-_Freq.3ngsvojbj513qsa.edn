@@ -1,0 +1,40 @@
+{:documentation "Computes a new frequency that is `freq` transposed by semitone `steps`."
+ :draft-argument "440 -9"
+ :identifier "Semitone->Freq"
+ :identity "3ngsvojbj513qsa"
+ :patch
+{:cables
+{["ef06ry7evs3kc7t" 0] [:fixed "pakod33ooi05cl0" 0]
+ ["ef06ry7evs3kc7t" 1] [:fixed "thpmnlrye8juko4" 0]
+ ["ggu52j7vy3vcl49" 0] [:fixed "pakod33ooi05cl0" 1]
+ ["thpmnlrye8juko4" 0] [:fixed "ggu52j7vy3vcl49" 0]}
+ :nodes
+{"ef06ry7evs3kc7t" 
+{:flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [99 -65]
+ }
+ "ggu52j7vy3vcl49" 
+{:inputs ["a"]
+ :label "/ #12"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:invariant "12"]]
+ :pos [-112 15]
+ :selected true}
+ "pakod33ooi05cl0" 
+{:inputs []
+ :label "(freq steps) = arg"
+ :outputs ["freq" "steps"]
+ :parsed "arg"
+ :pos [-198 -65]
+ }
+ "thpmnlrye8juko4" 
+{:inputs ["b"]
+ :label "Math:Pow(#2 $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:invariant "2"] [:free-var "b"]]]
+ :pos [0 15]
+ }}}}
