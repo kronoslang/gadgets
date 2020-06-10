@@ -1,0 +1,51 @@
+{:documentation "`pat...` is a list of values through which the sequencer cycles at `bpm` steps per minute. The values update at the control rate."
+ :draft-argument "60 [1 2 3 4]"
+ :identifier "Pattern-Seq"
+ :identity "initial"
+ :patch
+{:cables
+{["5jq2owb54pipjv0" 0] [:fixed "aqlobp4vyje9avn" 1]
+ ["5jq2owb54pipjv0" 1] [:fixed "8cwzzi6rai31hl" 0]
+ ["8cwzzi6rai31hl" 0] [:fixed "y088515wserm7kk" 0]
+ ["8cwzzi6rai31hl" 1] [:fixed "75ug6fqf2m20txd" 0]
+ ["8cwzzi6rai31hl" 2] [:fixed "aqlobp4vyje9avn" 0]
+ ["y088515wserm7kk" 0] [:fixed "3oeesu032aelk65" 0]}
+ :nodes
+{"3oeesu032aelk65" 
+{:inputs []
+ :label "0"
+ :outputs [""]
+ :parsed [:float "0"]
+ :pos [-217 -88]}
+ "5jq2owb54pipjv0" 
+{:inputs ["vector" "index"]
+ :label "Select-Wrap($vector $index)"
+ :outputs [""]
+ :parsed [:fn "Select-Wrap" [:tuple [:free-var "vector"] [:free-var "index"]]]
+ :pos [144 38]}
+ "75ug6fqf2m20txd" 
+{:inputs []
+ :label "#1 / #60"
+ :outputs [""]
+ :parsed [:infix [:invariant "1"] "/" [:invariant "60"]]
+ :pos [-160 -28]}
+ "8cwzzi6rai31hl" 
+{:ephemeral-inputs #{"more"}
+ :flip-y true
+ :inputs ["a" "b" "more" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [39 -88]}
+ "aqlobp4vyje9avn" 
+{:inputs []
+ :label "(bpm pat) = arg"
+ :outputs ["bpm" "pat"]
+ :parsed "arg"
+ :pos [-243 29]}
+ "y088515wserm7kk" 
+{:inputs ["in-1"]
+ :label "Timer($in-1)"
+ :outputs [""]
+ :parsed [:fn "Timer" [:tuple [:free-var "in-1"]]]
+ :pos [-107 -88]}}}}

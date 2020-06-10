@@ -1,0 +1,70 @@
+{:documentation "Produces a timer that counts seconds at double precision since start of stream, updating at control rate."
+ :draft-argument "nil"
+ :identifier "Timer"
+ :identity "bdm538l61zaso7j"
+ :patch
+{:cables
+{["6qq5zu4bw8tvo2w" 0] [:fixed "tyedm3dgakp39px" 0]
+ ["6qq5zu4bw8tvo2w" 1] [:fixed "ee5c0aw1hlj96x2" 0]
+ ["dna62d1fv0oe1o" 0] [:fixed "tyedm3dgakp39px" 0]
+ ["ee5c0aw1hlj96x2" 0] [:fixed "g2ehfwu9nzh5c3q" 0]
+ ["g2ehfwu9nzh5c3q" 0] [:fixed "h5aze5kr197r8wc" 0]
+ ["h5aze5kr197r8wc" 0] [:fixed "nksmbg6x6zep9tc" 0]
+ ["nksmbg6x6zep9tc" 0] [:fixed "7xa4e73ftdzt1xf" 0]
+ ["tyedm3dgakp39px" 0] [:fixed "6qq5zu4bw8tvo2w" 0]}
+ :nodes
+{"6qq5zu4bw8tvo2w" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [289 -92]}
+ "7xa4e73ftdzt1xf" 
+{:inputs []
+ :label "arg"
+ :outputs [""]
+ :parsed "arg"
+ :pos [-389 -82]}
+ "bt7x7cae6n8ahj" 
+{:inputs []
+ :label "0"
+ :outputs [""]
+ :parsed [:float "0"]
+ :pos [-336 -131]}
+ "dna62d1fv0oe1o" 
+{:inputs ["out"]
+ :label "$out"
+ :outputs [""]
+ :parsed [:free-var "out"]
+ :pos [289 80]}
+ "ee5c0aw1hlj96x2" 
+{:inputs ["sig"]
+ :label "Control:Signal($sig)"
+ :outputs [""]
+ :parsed [:fn "Control:Signal" [:tuple [:free-var "sig"]]]
+ :pos [172 -131]}
+ "g2ehfwu9nzh5c3q" 
+{:inputs ["b"]
+ :label "1d /"
+ :outputs [""]
+ :parsed [:infix [:double "1"] "/" [:free-var "b"]]
+ :pos [45 -131]}
+ "h5aze5kr197r8wc" 
+{:inputs ["sig"]
+ :label "Rate-of($sig)"
+ :outputs [""]
+ :parsed [:fn "Rate-of" [:tuple [:free-var "sig"]]]
+ :pos [-82 -131]}
+ "nksmbg6x6zep9tc" 
+{:inputs ["sig"]
+ :label "Control:Signal($sig)"
+ :outputs [""]
+ :parsed [:fn "Control:Signal" [:tuple [:free-var "sig"]]]
+ :pos [-209 -131]}
+ "tyedm3dgakp39px" 
+{:flip-x true
+ :inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [289 -6]}}}}

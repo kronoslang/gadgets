@@ -1,0 +1,12 @@
+{:identity "berxuy549uvz2y6"
+ :patch
+{:cables
+{}
+ :nodes
+{"1p80gu9abhu1nns" 
+{:inputs ["bpm" "pat"]
+ :label "Pattern-Seq($bpm $pat)"
+ :outputs [""]
+ :parsed [:fn "Pattern-Seq" [:tuple [:free-var "bpm"] [:free-var "pat"]]]
+ :pos [-204 -58]
+ :selected true}}}}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {},
+  "description": "Step sequencers and related gadgets for generating musical phrases with circuits.",
+  "license": "https://www.eclipse.org/legal/epl-v10.html",
+  "version": "0.1",
+  "name": "Gadgets",
+  "url": "https://kronoslang.io"
+}

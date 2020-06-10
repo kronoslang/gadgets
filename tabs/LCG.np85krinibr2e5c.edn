@@ -1,0 +1,68 @@
+{:draft-argument "Gen:Phasor(0.1) * 10"
+ :identifier "LCG"
+ :identity "np85krinibr2e5c"
+ :patch
+{:cables
+{["2j8rwonlx74f4ud" 0] [:fixed "fwltp22r7heu6y4" 0]
+ ["2j8rwonlx74f4ud" 1] [:fixed "3rzq1cpxctf63cl" 0]
+ ["3rzq1cpxctf63cl" 0] [:fixed "bnvvwisbv7xyz2f" 0]
+ ["4jo578zbo47pmxt" 0] [:fixed "4s8xw8lc7gq5dl7" 0]
+ ["az7n708x2ysqu8v" 0] [:fixed "4jo578zbo47pmxt" 0]
+ ["az7n708x2ysqu8v" 1] [:fixed "51pvgfkb9qrt4qq" 0]
+ ["bnvvwisbv7xyz2f" 0] [:fixed "az7n708x2ysqu8v" 0]
+ ["bnvvwisbv7xyz2f" 1] [:fixed "5tadi1oa2d5kle4" 0]}
+ :nodes
+{"2j8rwonlx74f4ud" 
+{:inputs ["a" "b" "more..."]
+ :label "&"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "&" [:free-var "b"] [:free-var "more..."]]
+ :pos [422 116]}
+ "3rzq1cpxctf63cl" 
+{:inputs ["i"]
+ :label "Coerce(Int32 $i)"
+ :outputs [""]
+ :parsed [:fn "Coerce" [:tuple "Int32" [:free-var "i"]]]
+ :pos [276 40]}
+ "4jo578zbo47pmxt" 
+{:inputs ["i"]
+ :label "Coerce(Int64 $i)"
+ :outputs [""]
+ :parsed [:fn "Coerce" [:tuple "Int64" [:free-var "i"]]]
+ :pos [-192 40]}
+ "4s8xw8lc7gq5dl7" 
+{:inputs []
+ :label "arg"
+ :outputs [""]
+ :parsed "arg"
+ :pos [-329 40]}
+ "51pvgfkb9qrt4qq" 
+{:inputs []
+ :label "1103515245q"
+ :outputs [""]
+ :parsed [:int64 "1103515245"]
+ :pos [-195 -16]}
+ "5tadi1oa2d5kle4" 
+{:inputs []
+ :label "12345q"
+ :outputs [""]
+ :parsed [:int64 "12345"]
+ :pos [-32 -55]}
+ "az7n708x2ysqu8v" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-24 40]}
+ "bnvvwisbv7xyz2f" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [76 40]}
+ "fwltp22r7heu6y4" 
+{:inputs []
+ :label "0x3fffffff"
+ :outputs [""]
+ :parsed [:hex "3fffffff"]
+ :pos [276 169]}}}}

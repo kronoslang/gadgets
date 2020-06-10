@@ -1,0 +1,13 @@
+{:assets 
+{}
+ :current-tab 4
+ :file "seq.veneer"
+ :manifest 
+{:dependencies 
+{}
+ :description "Step sequencers and related gadgets for generating musical phrases with circuits."
+ :license "https://www.eclipse.org/legal/epl-v10.html"
+ :name "Gadgets"
+ :url "https://kronoslang.io"
+ :version "0.1"}
+ :tabs ("tabs/draft.berxuy549uvz2y6.edn" "tabs/Timer.bdm538l61zaso7j.edn" "tabs/Pattern-Seq.initial.edn" "tabs/Artikulator.554mxn4yav9204b.edn" "tabs/Random-Seq.adme9a08kkmvdx.edn" "tabs/LCG.np85krinibr2e5c.edn")}

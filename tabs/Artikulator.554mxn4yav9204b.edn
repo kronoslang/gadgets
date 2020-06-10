@@ -1,0 +1,82 @@
+{:documentation "Produces a gate signal that is open for a fraction of every step, as specified by `pat`. The pattern proceeds by `bpm` steps a minute."
+ :draft-argument "108 * 4 [0.1 0.2 0.3 0.1 1 0.5 0.3 0.2]"
+ :identifier "Artikulator"
+ :identity "554mxn4yav9204b"
+ :patch
+{:cables
+{["339jcbe9p16ty89" 0] [:fixed "e6ep2mm4vq28zo3" 1]
+ ["339jcbe9p16ty89" 1] [:fixed "ng6mxxczeav5781" 0]
+ ["9k8dyfp815f1bar" 0] [:fixed "fnrpcpxjusdvdn5" 0]
+ ["9k8dyfp815f1bar" 1] [:fixed "339jcbe9p16ty89" 0]
+ ["fnrpcpxjusdvdn5" 0] [:fixed "uep6el4snfk894l" 0]
+ ["jos7fxb1q4ohf60" 0] [:fixed "9k8dyfp815f1bar" 0]
+ ["ng6mxxczeav5781" 0] [:fixed "7ox5dk5hogdpbc1" 0]
+ ["ng6mxxczeav5781" 1] [:fixed "o7r5ofx9swyrbe5" 0]
+ ["ng6mxxczeav5781" 2] [:fixed "e6ep2mm4vq28zo3" 0]
+ ["o7r5ofx9swyrbe5" 0] [:fixed "bbphxwct42p0e3z" 0]
+ ["uep6el4snfk894l" 0] [:fixed "ng6mxxczeav5781" 0]}
+ :nodes
+{"339jcbe9p16ty89" 
+{:flip-y true
+ :inputs ["vector" "index"]
+ :label "Select-Wrap($vector $index)"
+ :outputs [""]
+ :parsed [:fn "Select-Wrap" [:tuple [:free-var "vector"] [:free-var "index"]]]
+ :pos [-82 -105]}
+ "7ox5dk5hogdpbc1" 
+{:inputs []
+ :label "#1 / #60"
+ :outputs [""]
+ :parsed [:infix [:invariant "1"] "/" [:invariant "60"]]
+ :pos [-355 55]}
+ "9k8dyfp815f1bar" 
+{:inputs ["a" "b" "more..."]
+ :label "<"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "<" [:free-var "b"] [:free-var "more..."]]
+ :pos [329 55]}
+ "bbphxwct42p0e3z" 
+{:inputs []
+ :label "0"
+ :outputs [""]
+ :parsed [:float "0"]
+ :pos [-441 -16]}
+ "e6ep2mm4vq28zo3" 
+{:inputs []
+ :label "(bpm pat) = arg"
+ :outputs ["bpm" "pat"]
+ :parsed "arg"
+ :pos [-515 -82]}
+ "fnrpcpxjusdvdn5" 
+{:inputs ["x"]
+ :label "Fraction($x)"
+ :outputs [""]
+ :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
+ :pos [225 55]}
+ "jos7fxb1q4ohf60" 
+{:inputs ["a"]
+ :label "& 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "&" [:float "1"]]
+ :pos [415 55]}
+ "ng6mxxczeav5781" 
+{:ephemeral-inputs #{"more"}
+ :inputs ["a" "b" "more" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [-171 55]}
+ "o7r5ofx9swyrbe5" 
+{:inputs ["in-1"]
+ :label "Timer($in-1)"
+ :outputs [""]
+ :parsed [:fn "Timer" [:tuple [:free-var "in-1"]]]
+ :pos [-326 -16]}
+ "uep6el4snfk894l" 
+{:inputs ["f"]
+ :label "Coerce(Float $f)"
+ :outputs [""]
+ :parsed [:fn "Coerce" [:tuple "Float" [:free-var "f"]]]
+ :pos [41 55]}}
+ :scale 1
+ :scroll [0 0]}}
