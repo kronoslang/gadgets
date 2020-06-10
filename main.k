@@ -55,18 +55,20 @@ Random-Seq(bpm seed min max) {
 (nu1lcaejt2moi4x7-0) = 0
 (ngq9b4rcbdd7px7d-0) = Coerce(Float nm1852zrsb07567n-0)
 (nbmg8yd16zjbpwuo-0) = (nw6jzxfb8igg2c0n-0 * n99u1c16xw1lmh9g-0)
+(nbui2hx3lczqw98t-0) = Algorithm:Choose(n1tfgyo3dvmiicuu-0 nqywdqw7tz1jxkxv-0 neyr6ngwnxzjwote-0)
+(n1tfgyo3dvmiicuu-0) = Control:Edge+-(n9vwop7oh08c7olp-0)
 (n0mx3hkta9kngrzg-0) = (ndis82r5pln34xjp-0 * njh95a72zgzdpr65-0 * nwn8b1q3t8m5za2c-0)
+(n9vwop7oh08c7olp-0) = Truncate(n0mx3hkta9kngrzg-0)
 (ndis82r5pln34xjp-0) = Timer(nu1lcaejt2moi4x7-0)
 (nm1852zrsb07567n-0) = 0x3fffffff
 (nbnq6v7e4ivt5zxu-0) = (nwn8b1q3t8m5za2c-2 + nbmg8yd16zjbpwuo-0)
 (nw6jzxfb8igg2c0n-0) = (nwn8b1q3t8m5za2c-3 - nwn8b1q3t8m5za2c-2)
-(ndtx31gegyotycpg-0) = Coerce(Int32 n0mx3hkta9kngrzg-0)
 (nggt2ntv0w7994u-0) = Coerce(Int32 nwn8b1q3t8m5za2c-1)
 (nwn8b1q3t8m5za2c-0 nwn8b1q3t8m5za2c-1 nwn8b1q3t8m5za2c-2 nwn8b1q3t8m5za2c-3) = arg
-(nqywdqw7tz1jxkxv-0) = LCG(n5t3m89s7qc7ax2r-0)
+(nqywdqw7tz1jxkxv-0) = LCG(neyr6ngwnxzjwote-0)
 (njh95a72zgzdpr65-0) = (#1 / #60)
-(n5t3m89s7qc7ax2r-0) = Xor(ndtx31gegyotycpg-0 nggt2ntv0w7994u-0)
 (n99u1c16xw1lmh9g-0) = (nqywdqw7tz1jxkxv-0 / ngq9b4rcbdd7px7d-0)
+(neyr6ngwnxzjwote-0) = z-1(nggt2ntv0w7994u-0 nbui2hx3lczqw98t-0)
 nbnq6v7e4ivt5zxu-0
 }
 

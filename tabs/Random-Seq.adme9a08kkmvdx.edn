@@ -7,19 +7,23 @@
 {["0mx3hkta9kngrzg" 0] [:fixed "dis82r5pln34xjp" 0]
  ["0mx3hkta9kngrzg" 1] [:fixed "jh95a72zgzdpr65" 0]
  ["0mx3hkta9kngrzg" 2] [:fixed "wn8b1q3t8m5za2c" 0]
- ["5t3m89s7qc7ax2r" 0] [:fixed "dtx31gegyotycpg" 0]
- ["5t3m89s7qc7ax2r" 1] [:fixed "ggt2ntv0w7994u" 0]
+ ["1tfgyo3dvmiicuu" 0] [:fixed "9vwop7oh08c7olp" 0]
  ["99u1c16xw1lmh9g" 0] [:fixed "qywdqw7tz1jxkxv" 0]
  ["99u1c16xw1lmh9g" 1] [:fixed "gq9b4rcbdd7px7d" 0]
+ ["9vwop7oh08c7olp" 0] [:fixed "0mx3hkta9kngrzg" 0]
  ["bmg8yd16zjbpwuo" 0] [:fixed "w6jzxfb8igg2c0n" 0]
  ["bmg8yd16zjbpwuo" 1] [:fixed "99u1c16xw1lmh9g" 0]
  ["bnq6v7e4ivt5zxu" 0] [:fixed "wn8b1q3t8m5za2c" 2]
  ["bnq6v7e4ivt5zxu" 1] [:fixed "bmg8yd16zjbpwuo" 0]
+ ["bui2hx3lczqw98t" 0] [:fixed "1tfgyo3dvmiicuu" 0]
+ ["bui2hx3lczqw98t" 1] [:fixed "qywdqw7tz1jxkxv" 0]
+ ["bui2hx3lczqw98t" 2] [:fixed "eyr6ngwnxzjwote" 0]
  ["dis82r5pln34xjp" 0] [:fixed "u1lcaejt2moi4x7" 0]
- ["dtx31gegyotycpg" 0] [:fixed "0mx3hkta9kngrzg" 0]
+ ["eyr6ngwnxzjwote" 0] [:fixed "ggt2ntv0w7994u" 0]
+ ["eyr6ngwnxzjwote" 1] [:fixed "bui2hx3lczqw98t" 0]
  ["ggt2ntv0w7994u" 0] [:fixed "wn8b1q3t8m5za2c" 1]
  ["gq9b4rcbdd7px7d" 0] [:fixed "m1852zrsb07567n" 0]
- ["qywdqw7tz1jxkxv" 0] [:fixed "5t3m89s7qc7ax2r" 0]
+ ["qywdqw7tz1jxkxv" 0] [:fixed "eyr6ngwnxzjwote" 0]
  ["w6jzxfb8igg2c0n" 0] [:fixed "wn8b1q3t8m5za2c" 3]
  ["w6jzxfb8igg2c0n" 1] [:fixed "wn8b1q3t8m5za2c" 2]}
  :nodes
@@ -29,103 +33,118 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [-251 -7]
+ :pos [-195 9]
  }
- "5t3m89s7qc7ax2r" 
-{:inputs ["a" "b"]
- :label "Xor($a $b)"
+ "1tfgyo3dvmiicuu" 
+{:inputs ["sig"]
+ :label "Control:Edge+-($sig)"
  :outputs [""]
- :parsed [:fn "Xor" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [133 -77]
+ :parsed [:fn "Control:Edge+-" [:tuple [:free-var "sig"]]]
+ :pos [-87 93]
  }
  "99u1c16xw1lmh9g" 
 {:inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [308 14]
+ :pos [214 -128]
+ }
+ "9vwop7oh08c7olp" 
+{:inputs ["a"]
+ :label "Truncate($a)"
+ :outputs [""]
+ :parsed [:fn "Truncate" [:tuple [:free-var "a"]]]
+ :pos [-74 9]
  }
  "bmg8yd16zjbpwuo" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [336 106]
+ :pos [263 -72]
  }
  "bnq6v7e4ivt5zxu" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [374 201]
+ :pos [317 4]
+ :selected true}
+ "bui2hx3lczqw98t" 
+{:inputs ["truth" "when-true" "when-false"]
+ :label "Algorithm:Choose($truth $when-true $when-false)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Choose" [:tuple [:free-var "truth"] [:free-var "when-true"] [:free-var "when-false"]]]
+ :pos [35 93]
  }
  "dis82r5pln34xjp" 
 {:inputs ["in-1"]
  :label "Timer($in-1)"
  :outputs [""]
  :parsed [:fn "Timer" [:tuple [:free-var "in-1"]]]
- :pos [-369 -7]
+ :pos [-313 9]
  }
- "dtx31gegyotycpg" 
-{:inputs ["d"]
- :label "Coerce(Int32 $d)"
+ "eyr6ngwnxzjwote" 
+{:inputs ["init" "sig~"]
+ :label "z-1($init $sig~)"
  :outputs [""]
- :parsed [:fn "Coerce" [:tuple "Int32" [:free-var "d"]]]
- :pos [-56 -7]
+ :parsed [:fn "z-1" [:tuple [:free-var "init"] [:free-var "sig~"]]]
+ :pos [160 93]
  }
  "ggt2ntv0w7994u" 
 {:inputs ["d"]
  :label "Coerce(Int32 $d)"
  :outputs [""]
  :parsed [:fn "Coerce" [:tuple "Int32" [:free-var "d"]]]
- :pos [-59 -167]
+ :pos [-126 202]
  }
  "gq9b4rcbdd7px7d" 
 {:inputs ["f"]
  :label "Coerce(Float $f)"
  :outputs [""]
  :parsed [:fn "Coerce" [:tuple "Float" [:free-var "f"]]]
- :pos [119 -252]
+ :pos [-11 -253]
  }
  "jh95a72zgzdpr65" 
 {:inputs []
  :label "#1 / #60"
  :outputs [""]
  :parsed [:infix [:invariant "1"] "/" [:invariant "60"]]
- :pos [-385 -89]
+ :pos [-329 -73]
  }
  "m1852zrsb07567n" 
 {:inputs []
  :label "0x3fffffff"
  :outputs [""]
  :parsed [:hex "3fffffff"]
- :pos [-146 -252]
+ :pos [-276 -253]
  }
  "qywdqw7tz1jxkxv" 
 {:inputs ["in-1"]
  :label "LCG($in-1)"
  :outputs [""]
  :parsed [:fn "LCG" [:tuple [:free-var "in-1"]]]
- :pos [229 -77]
+ :pos [246 93]
  }
  "u1lcaejt2moi4x7" 
 {:inputs []
  :label "0"
  :outputs [""]
  :parsed [:float "0"]
- :pos [-473 -7]
+ :pos [-417 9]
  }
  "w6jzxfb8igg2c0n" 
 {:inputs ["a" "b" "more..."]
  :label "-"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
- :pos [194 106]
+ :pos [189 -72]
  }
  "wn8b1q3t8m5za2c" 
-{:inputs []
+{:color 0
+ :inputs []
  :label "(bpm seed min max) = arg"
  :outputs ["bpm" "seed" "min" "max"]
  :parsed "arg"
- :pos [-456 -215]
+ :pos [-343 -195]
  }}}}
