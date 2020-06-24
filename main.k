@@ -43,11 +43,12 @@ Artikulator(bpm pat...) {
 (nfnrpcpxjusdvdn5-0) = Fraction(nuep6el4snfk894l-0)
 (nbbphxwct42p0e3z-0) = 0
 (n339jcbe9p16ty89-0) = Select-Wrap(ne6ep2mm4vq28zo3-1 nng6mxxczeav5781-0)
+(n6gfeukozvef3s0h-0) = Control:Signal-Fine(njos7fxb1q4ohf60-0)
 (nuep6el4snfk894l-0) = Coerce(Float nng6mxxczeav5781-0)
 (no7r5ofx9swyrbe5-0) = Timer(nbbphxwct42p0e3z-0)
 (nng6mxxczeav5781-0) = (n7ox5dk5hogdpbc1-0 * no7r5ofx9swyrbe5-0 * ne6ep2mm4vq28zo3-0)
 (ne6ep2mm4vq28zo3-0 ne6ep2mm4vq28zo3-1) = arg
-njos7fxb1q4ohf60-0
+n6gfeukozvef3s0h-0
 }
 
 Random-Seq(bpm seed min max) {

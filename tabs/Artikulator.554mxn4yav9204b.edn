@@ -6,6 +6,7 @@
 {:cables
 {["339jcbe9p16ty89" 0] [:fixed "e6ep2mm4vq28zo3" 1]
  ["339jcbe9p16ty89" 1] [:fixed "ng6mxxczeav5781" 0]
+ ["6gfeukozvef3s0h" 0] [:fixed "jos7fxb1q4ohf60" 0]
  ["9k8dyfp815f1bar" 0] [:fixed "fnrpcpxjusdvdn5" 0]
  ["9k8dyfp815f1bar" 1] [:fixed "339jcbe9p16ty89" 0]
  ["fnrpcpxjusdvdn5" 0] [:fixed "uep6el4snfk894l" 0]
@@ -22,61 +23,78 @@
  :label "Select-Wrap($vector $index)"
  :outputs [""]
  :parsed [:fn "Select-Wrap" [:tuple [:free-var "vector"] [:free-var "index"]]]
- :pos [-82 -105]}
+ :pos [-82 -105]
+ }
+ "6gfeukozvef3s0h" 
+{:inputs ["sig"]
+ :label "Control:Signal-Fine($sig)"
+ :outputs [""]
+ :parsed [:fn "Control:Signal-Fine" [:tuple [:free-var "sig"]]]
+ :pos [450 160]
+ }
  "7ox5dk5hogdpbc1" 
 {:inputs []
  :label "#1 / #60"
  :outputs [""]
  :parsed [:infix [:invariant "1"] "/" [:invariant "60"]]
- :pos [-355 55]}
+ :pos [-355 55]
+ }
  "9k8dyfp815f1bar" 
 {:inputs ["a" "b" "more..."]
  :label "<"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "<" [:free-var "b"] [:free-var "more..."]]
- :pos [329 55]}
+ :pos [329 55]
+ }
  "bbphxwct42p0e3z" 
 {:inputs []
  :label "0"
  :outputs [""]
  :parsed [:float "0"]
- :pos [-441 -16]}
+ :pos [-441 -16]
+ }
  "e6ep2mm4vq28zo3" 
 {:inputs []
  :label "(bpm pat...) = arg"
  :outputs ["bpm" "pat..."]
  :parsed "arg"
- :pos [-515 -82]}
+ :pos [-515 -82]
+ }
  "fnrpcpxjusdvdn5" 
 {:inputs ["x"]
  :label "Fraction($x)"
  :outputs [""]
  :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [225 55]}
+ :pos [225 55]
+ }
  "jos7fxb1q4ohf60" 
 {:inputs ["a"]
  :label "& 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "&" [:float "1"]]
- :pos [415 55]}
+ :pos [415 55]
+ }
  "ng6mxxczeav5781" 
 {:ephemeral-inputs #{"more"}
  :inputs ["a" "b" "more" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [-171 55]}
+ :pos [-171 55]
+ }
  "o7r5ofx9swyrbe5" 
 {:inputs ["in-1"]
  :label "Timer($in-1)"
  :outputs [""]
  :parsed [:fn "Timer" [:tuple [:free-var "in-1"]]]
- :pos [-326 -16]}
+ :pos [-326 -16]
+ }
  "uep6el4snfk894l" 
 {:inputs ["f"]
  :label "Coerce(Float $f)"
  :outputs [""]
  :parsed [:fn "Coerce" [:tuple "Float" [:free-var "f"]]]
- :pos [41 55]}}
+ :pos [41 55]
+ }}
  :scale 1
  :scroll [0 0]}}
